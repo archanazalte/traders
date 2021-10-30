@@ -1,0 +1,39 @@
+<div class="container-fluid">
+   
+   
+    <div class="row ">
+       
+     
+        <div class="col-md-2  admin">
+           
+          
+            <div class="icon">
+                <div class="list-item" id="customer" #customer (click)="activeRout($event)"><i
+                        class="fa fa-user-circle  fa-1x"></i> &nbsp;Customer </div>
+            </div>
+            <div class="icon">
+                <div class="list-item" id="trader" #trader (click)="activeRout($event)" ><i class="fa fa-user-circle fa-1x"></i>
+                    &nbsp;Trader</div>
+            </div>
+            <div class="icon">
+                <div class="list-item" id="review" #review (click)="activeRout($event)"><i
+                        class="fa fa-user-circle  fa-1x"></i> &nbsp;Reviews</div>
+            </div>
+           
+        </div>
+        <div class="col-md-10 image">
+            <div *ngIf="display_customer">
+                <app-customer-list></app-customer-list>
+             </div>
+            <div *ngIf="display_trader">
+                <app-trader-list></app-trader-list>
+            </div>
+           
+
+            <div *ngIf="display_review">
+                <app-review-list></app-review-list>
+            </div>
+
+        </div>
+    </div>
+</div>

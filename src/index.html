@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Traders</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <base href="/">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <script src="https://cdn.tiny.cloud/1/3xznf5zyg5cca1z45ul1ouk9eud79398jc522y8mgjf8cwpw/tinymce/5/tinymce.min.js"
+    referrerpolicy="origin"></script>
+
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>  
+
+
+  <script>
+    // text editor 
+    tinymce.init({
+      selector: 'textarea#editor',
+      menubar: false
+    });
+    //end text editor
+
+    // image upload
+    window.onload = function () {
+      var fileUpload = document.getElementById("fileupload");
+      fileUpload.onchange = function () {
+        if (typeof (FileReader) != "undefined") {
+          var dvPreview = document.getElementById("dvPreview");
+          dvPreview.innerHTML = "";
+          var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+          for (var i = 0; i < fileUpload.files.length; i++) {
+            var file = fileUpload.files[i];
+            if (regex.test(file.name.toLowerCase())) {
+              var reader = new FileReader();
+              reader.onload = function (e) {
+                var img = document.createElement("IMG");
+                img.height = "100";
+                img.width = "100";
+                img.src = e.target.result;
+                dvPreview.appendChild(img);
+              }
+              reader.readAsDataURL(file);
+            } else {
+              alert(file.name + " is not a valid image file.");
+              dvPreview.innerHTML = "";
+              return false;
+            }
+          }
+        } else {
+          alert("This browser does not support HTML5 FileReader.");
+        }
+      }
+    };
+    //end image upload
+
+
+
+    jQuery(document).ready(function ($) {
+
+      $(".btnrating").on('click', (function (e) {
+
+        var previous_value = $("#selected_rating").val();
+
+        var selected_value = $(this).attr("data-attr");
+        $("#selected_rating").val(selected_value);
+
+        $(".selected-rating").empty();
+        $(".selected-rating").html(selected_value);
+
+        for (i = 1; i <= selected_value; ++i) {
+          $("#rating-star-" + i).toggleClass('btn-warning');
+          $("#rating-star-" + i).toggleClass('btn-default');
+        }
+
+        for (ix = 1; ix <= previous_value; ++ix) {
+          $("#rating-star-" + ix).toggleClass('btn-warning');
+          $("#rating-star-" + ix).toggleClass('btn-default');
+        }
+
+      }));
+
+
+    });
+
+
+
+
+
+
+    var app = angular.module('myApp', []);  
+  
+  app.controller('mainCtrl', function ($scope) {  
+      $scope.phoneNumbr = /[789][0-9]{9}/; 
+      $scope.email1 = /[^@]+@[^@]+\.[a-zA-Z]{2,6}/; 
+      $scope.aadhar1 = /[0-9]{12}/; 
+      $scope.uname1=/[A-Z][a-zA-Z]{6}[0-9]{5}/;
+      $scope.pan1=/[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}/;
+  });
+
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <app-root></app-root>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="assets/js/image.js"></script>
+</body>
+
+
+</html>

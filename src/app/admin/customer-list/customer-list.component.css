@@ -1,0 +1,25 @@
+
+.trader-img{
+    height: 120px;
+    width: 120px;
+
+}
+.traders-data{
+    list-style-type: none;
+}
+.fa{
+    padding: 4px;
+    margin: 2px;
+    /* background-color: #483d8b; */
+    color: grey;
+}
+.card-container{
+    height: 550px;
+    overflow-y: scroll;
+}
+.card{
+    margin: 10px;
+}
+.card-title{
+    margin-left: 2.5rem;
+}

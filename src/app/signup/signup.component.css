@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+/* set background image  */
+.image{
+  font-family: 'Mukta', sans-serif;
+  height: calc(100vh - 50px); 
+  background-image: url('../../assets/img/bgimage.jpeg'); 
+  background-attachment: fixed;
+	 min-height:550px;
+	
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position:center;
+	position:relative;
+     overflow-y: hidden; 
+}
+.card{
+	margin-top: 30px;
+}
+.type_select{
+	border: 1px solid #ced4da !important;
+	border-radius: 4px !important;
+}
+.nav-link{
+	padding: 6px 7px !important;
+	width: 50%;
+	color: #737267 !important;
+text-align: center;
+  }
+ 
+  /* .register-btn{
+	  width: 4rem;
+  } */
+.row{
+	margin-right: 0px;
+}
+.nav-link.active{
+	color: white !important;
+}

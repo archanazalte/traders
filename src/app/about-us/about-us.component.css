@@ -1,0 +1,40 @@
+.about-img{
+    width: 100%;
+}
+.about-box{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+@media only screen   
+and (min-device-width : 320px)   
+and (max-device-width : 480px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+   
+    .about-heading{
+        font-size: 20px;
+    }
+   
+}
+@media only screen and (min-width: 600px){
+    .about-img{
+        width:250px;
+    
+    }
+}
+@media only screen and (min-width: 768px){
+    .about-img{
+        width:400px;
+    
+    }
+
+}
+@media only screen and (min-width: 992px) {
+    .about-img{
+        width:400px;
+    
+    }
+}

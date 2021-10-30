@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta');
+/* set background image  */
+.image{
+  font-family: 'Mukta', sans-serif;
+	
+	min-height:500px;
+	height: calc(100vh - 65px);
+	background-image: url('../../assets/img/bgimage.jpeg'); 
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position:center;
+	position:relative;
+     overflow-y: hidden; 
+}
+.row{
+	margin-right: 0px;
+}
+
+
+

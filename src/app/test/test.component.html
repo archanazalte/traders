@@ -1,0 +1,607 @@
+<!-- <form [formGroup]="form">
+    <ngx-star-rating formControlName="rating" [id]="'rating'"></ngx-star-rating>
+    <div>Rating: {{form.value.rating}}</div>
+    <p>form is valid: {{ form.valid ? 'true' : 'false' }}</p>
+</form>  -->
+<!-- <div class="modal fade" id="giveFeedback" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Feedback</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form (submit)="parkReview($event)">
+                    <div class="form-group">
+                        <textarea placeholder="Please enter your feedback here" style="height: 150px;" id="userReview" class="form-control"></textarea>
+                    </div>
+                    <div>
+                        <div class="row" class="form-group">
+                            <ngb-rating [(rate)]="userRate" max="5" >
+                                    <ng-template let-fill="fill" let-index="index">
+                                      <span class="star" [class.filled]="fill === 100" >&#9733;</span>
+                                    </ng-template>
+                                  </ngb-rating>
+                        </div>
+                    </div>
+                    <button type="submit" style="float: right" class="btn btn-primary" id="btnDelete">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>   -->
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                    data-image="assets\img\headers-img-4.jpg" data-target="#image-gallery">
+                    <img class="img-thumbnail" src="assets\img\headers-img-4.jpg" alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                    data-image="assets\img\headers-img-4.jpg" data-target="#image-gallery">
+                    <img class="img-thumbnail" src="assets\img\headers-img-4.jpg" alt="Another alt text">
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                    data-image="assets\img\headers-img-4.jpg" data-target="#image-gallery">
+                    <img class="img-thumbnail" src="assets\img\headers-img-4.jpg" alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Test1"
+                    data-image="assets\img\headers-img-4.jpg" data-target="#image-gallery">
+                    <img class="img-thumbnail" src="assets\img\headers-img-4.jpg" alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                    data-image="assets\img\headers-img-4.jpg" data-target="#image-gallery">
+                    <img class="img-thumbnail" src="assets\img\headers-img-4.jpg" alt="Another alt text">
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                    data-image="assets\img\headers-img-4.jpg" data-target="#image-gallery">
+                    <img class="img-thumbnail" src="assets\img\headers-img-4.jpg" alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                    data-image="assets\img\headers-img-2.jpeg" data-target="#image-gallery">
+                    <img class="img-thumbnail" src="assets\img\headers-img-2.jpeg" alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                    data-image="assets\img\headers-img-3.jpeg" data-target="#image-gallery">
+                    <img class="img-thumbnail" src="assets\img\headers-img-3.jpeg" alt="Another alt text">
+                </a>
+            </div>
+
+
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                    data-image="assets\img\headers-img-4.jpg" data-target="#image-gallery">
+                    <img class="img-thumbnail" src="assets\img\headers-img-4.jpg" alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                    data-image="assets\img\bgimage.jpeg" data-target="#image-gallery">
+                    <img class="img-thumbnail" src="assets\img\bgimage.jpeg" alt="Another alt text">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                    data-image="assets\img\headers-img-4.jpg" data-target="#image-gallery">
+                    <img class="img-thumbnail" src="assets\img\headers-img-4.jpg" alt="Another alt text">
+                </a>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="image-gallery-title"></h4>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                                class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i
+                                class="fa fa-arrow-left"></i>
+                        </button>
+
+                        <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i
+                                class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+<!-- <div class="jumbotron text-center" style="margin-bottom:0; background-color: #FBFCFF;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Portafolio</h1>
+                <hr class="my-4">
+                <div align="center">
+                  <button class="btn btn-primary active filter-button" data-filter="todo">Todo</button>
+                  <button class="btn btn-primary filter-button" data-filter="retratos">Retratos</button>
+                  <button class="btn btn-primary filter-button" data-filter="paisajes">Paisajes</button>
+                  <button class="btn btn-primary filter-button" data-filter="disenos">Diseños</button>
+
+                      <div class="row">
+                          <div class="row">
+                              <div class="col-lg-3 col-md-4 col-xs-6 thumb filter retratos">
+                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                                     data-image="https://images.pexels.com/photos/50631/pexels-photo-50631.jpeg?cs=srgb&dl=aerial-bridge-buildings-50631.jpg&fm=jpg"
+                                     data-target="#image-gallery">
+                                      <img class="img-thumbnail"
+                                           src="https://images.pexels.com/photos/50631/pexels-photo-50631.jpeg?cs=srgb&dl=aerial-bridge-buildings-50631.jpg&fm=jpg"
+                                           alt="Retratos">
+                                  </a>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-xs-6 thumb filter retratos">
+                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                                     data-image="https://images.pexels.com/photos/34629/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     data-target="#image-gallery">
+                                      <img class="img-thumbnail"
+                                           src="https://images.pexels.com/photos/34629/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                           alt="Retratos">
+                                  </a>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-xs-6 thumb filter retratos">
+                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                                     data-image="https://images.pexels.com/photos/698885/pexels-photo-698885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     data-target="#image-gallery">
+                                      <img class="img-thumbnail"
+                                           src="https://images.pexels.com/photos/698885/pexels-photo-698885.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                           alt="Retratos">
+                                  </a>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-xs-6 thumb filter paisajes">
+                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                                     data-image="https://images.pexels.com/photos/1563286/pexels-photo-1563286.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     data-target="#image-gallery">
+                                      <img class="img-thumbnail"
+                                           src="https://images.pexels.com/photos/1563286/pexels-photo-1563286.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                           alt="Paisaje">
+                                  </a>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-xs-6 thumb filter disenos">
+                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                                     data-image="https://images.pexels.com/photos/1832064/pexels-photo-1832064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     data-target="#image-gallery">
+                                      <img class="img-thumbnail"
+                                           src="https://images.pexels.com/photos/1832064/pexels-photo-1832064.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                           alt="Paisaje">
+                                  </a>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-xs-6 thumb filter disenos">
+                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                                     data-image="https://images.pexels.com/photos/909620/pexels-photo-909620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     data-target="#image-gallery">
+                                      <img class="img-thumbnail"
+                                           src="https://images.pexels.com/photos/909620/pexels-photo-909620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                           alt="Paisaje">
+                                  </a>
+                              </div>
+                              <div class="col-lg-3 col-md-4 col-xs-6 thumb filter disenos">
+                                  <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                                     data-image="https://images.pexels.com/photos/940880/pexels-photo-940880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                     data-target="#image-gallery">
+                                      <img class="img-thumbnail"
+                                           src="https://images.pexels.com/photos/940880/pexels-photo-940880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                           alt="Paisaje">
+                                  </a>
+                              </div>
+                          </div>
+
+                          <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h4 class="modal-title" id="image-gallery-title"></h4>
+                                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                          <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                                      </div>
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i class="fa fa-arrow-left"></i>
+                                          </button>
+
+                                          <button type="button" id="show-next-image" class="btn btn-secondary float-right"><i class="fa fa-arrow-right"></i>
+                                          </button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+          </div>
+        </div>
+      </div>
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <img id="myImg" src="assets\img\headers-img-4.jpg" alt="Snow" style="width:100%;max-width:300px">
+
+ The Modal -->
+<!-- <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div> -->
+
+
+
+<!-- 
+<div class="col-lg-8">
+
+
+    <div class="card">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+
+                        <h6 class="mb-0">First Name</h6>
+                    </div>
+                    <div class=" col-sm-9 text-secondaryform-group register-show">
+                       
+                        <input type="text" placeholder=" First Name" formControlName="fullname" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }" />
+                        <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
+                            <div *ngIf="f.fullname.errors.required">First name is required</div>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Last Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary form-group register-show">
+
+                        <input type="text" placeholder="Last Name" formControlName="lastname" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }" />
+                        <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastname.errors.required">lastname is required</div>
+                            <div *ngIf="f.lastname.errors.minlength">
+                                lastname must be at least 6 characters
+                            </div>
+                            <div *ngIf="f.lastname.errors.maxlength">
+                                lastname must not exceed 20 characters
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary form-group register-show">
+                        <input type="text" placeholder="Email" formControlName="email" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email is invalid</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary form-group register-show">
+                        <input type="number" placeholder="Mobile" formControlName="mobile" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+                        <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                            <div *ngIf="f.mobile.errors.required">mobile is required</div>
+                            <div *ngIf="f.mobile.errors.minlength">
+                                Password must be at least 10 characters
+                            </div>
+                            <div *ngIf="f.mobile.errors.maxlength">
+                                mobile must not exceed 10 characters
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary form-group register-show">
+                        <input type="number" placeholder="address" formControlName="address" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+                        <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                            <div *ngIf="f.address.errors.required">mobile is required</div>
+                            <div *ngIf="f.address.errors.minlength">
+                                Password must be at least 10 characters
+                            </div>
+                            <div *ngIf="f.address.errors.maxlength">
+                                mobile must not exceed 10 characters
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Aadhar No.</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary form-group register-show">
+                        <input type="number" placeholder="aadhar" formControlName="aadhar" class="form-control"
+                            [ngClass]="{ 'is-invalid': submitted && f.aadhar.errors }" />
+                        <div *ngIf="submitted && f.aadhar.errors" class="invalid-feedback">
+                            <div *ngIf="f.aadhar.errors.required">mobile is required</div>
+                            <div *ngIf="f.aadhar.errors.minlength">
+                                Password must be at least 10 characters
+                            </div>
+                            <div *ngIf="f.aadhar.errors.maxlength">
+                                mobile must not exceed 10 characters
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Select Vegetable</h6> -->
+                    <!-- </div> -->
+                    <!-- <div class="col-sm-9 text-secondary">
+
+
+
+                        <div class=" my-1">
+                            <angular2-multiselect [data]="dropdownList" [settings]="dropdownSettings"
+                                formControlName="state">
+                            </angular2-multiselect>
+                        </div>
+
+                        <div class=" my-1">
+
+                            <angular2-multiselect [data]="district_dropdownList"
+                                [settings]=" district_dropdownSettings" formControlName="district">
+                            </angular2-multiselect>
+                        </div>
+
+                        <div class=" my-1">
+                            <angular2-multiselect [data]="city_dropdownList"
+                                [settings]="city_dropdownSettings" formControlName="city">
+                            </angular2-multiselect>
+                        </div>
+                        <div class=" my-1">
+                            <angular2-multiselect [data]="Vegetable_dropdownList"
+                                [settings]=" Vegetable_dropdownSettings" formControlName="Vegetable">
+                            </angular2-multiselect>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Describe the issue in detail</h6>
+                    </div>
+                    <div class="col-sm-9 ">
+                        <div class="row justify-content-md-center">
+                            <div class="form-group">
+                                <textarea id="editor"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-9 text-secondary form-group register-show">
+                    <button type="submit" class="btn btn-primary register-btn">Register</button>
+            
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+ -->
+ <form action="Task1.html"> 
+    <ng-form name="myForm" ng-controller="mainCtrl"> 
+     <div>  
+            Enter username<input type="text" placeholder="sername" name="uname" ng-pattern="uname1" ng-model="uname" required/>  
+            <br><span class="error" ng-show="myForm.uname.$error.pattern">username must start with uppercase and 6 length of any letter and end with 5 length of numeric</span>  
+        </div>
+      <div>  
+            Enter username<input type="text" placeholder="pan number" name="pan" ng-pattern="pan1" ng-model="pan" required/>  
+            <br><span class="error" ng-show="myForm.pan.$error.pattern">valid pan card number</span>  
+        </div> 
+      <div>  
+            Enter mobile number<input type="text" placeholder="+91-xxx-xxxxx" name="phone" ng-pattern="phoneNumbr" ng-model="phone" required/>  
+            <br><span class="error" ng-show="myForm.phone.$error.pattern">Please Enter the Phone no matching pattern [+91-xxx-xxxxx || 91-xxx-xxxxx]</span>  
+        </div>  
+       <div>  
+            Enter email id<input type="text" placeholder="tatti@gmail.com" name="email" ng-pattern="email1" ng-model="email" required/>  
+            <br><span class="error" ng-show="myForm.email.$error.pattern">Please Enter the email matching pattern [abcde@gmail.com]</span>  
+        </div> 
+        <div>  
+            Enter aadhar number<input type="text" placeholder="enter aadhar number" name="aadhar" ng-pattern="aadhar1" ng-model="aadhar" required/>  
+            <br><span class="error" ng-show="myForm.aadhar.$error.pattern">Please Enter the 12 digit aadhar number</span>  
+        </div>
+        Enter password<input type="password" name="myInput" ng-model="myInput" ng-maxlength="12" ng-minlength="10" required/>
+<br><span class="error" ng-if="!myForm.myInput.$valid">Enter correct length</span>
+<p><button id="submit" type="submit" ng-disabled="myForm.$invalid">Submit</button></p>
+    </ng-form> 
+    </form> 
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="m-4">
+
+    <div class="form-group register-show">
+        <div class="text-center">
+            <h2 class="card-title">Register</h2>
+
+        </div>
+        <input type="text" placeholder=" First Name" formControlName="fullname" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }" />
+        <div *ngIf="submitted && f.fullname.errors" class="invalid-feedback">
+            <div *ngIf="f.fullname.errors.required">First name is required</div>
+        </div>
+    </div>
+
+    <div class="form-group register-show">
+
+        <input type="text" placeholder="Last Name" formControlName="lastname" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }" />
+        <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+            <div *ngIf="f.lastname.errors.required">lastname is required</div>
+            <div *ngIf="f.lastname.errors.minlength">
+                lastname must be at least 6 characters
+            </div>
+            <div *ngIf="f.lastname.errors.maxlength">
+                lastname must not exceed 20 characters
+            </div>
+        </div>
+    </div>
+    <div class="form-group register-show">
+        <input type="text" placeholder="Email" formControlName="email" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email is invalid</div>
+        </div>
+    </div>
+    <div class="form-group register-show">
+        <input type="number" placeholder="Mobile" formControlName="mobile" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+        <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+            <div *ngIf="f.mobile.errors.required">mobile is required</div>
+            <div *ngIf="f.mobile.errors.minlength">
+                Password must be at least 10 characters
+            </div>
+            <div *ngIf="f.mobile.errors.maxlength">
+                mobile must not exceed 10 characters
+            </div>
+        </div>
+    </div>
+    <div class="form-group register-show">
+        <input type="number" placeholder="address" formControlName="address" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+        <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+            <div *ngIf="f.address.errors.required">mobile is required</div>
+            <div *ngIf="f.address.errors.minlength">
+                Password must be at least 10 characters
+            </div>
+            <div *ngIf="f.address.errors.maxlength">
+                mobile must not exceed 10 characters
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group register-show">
+        <input type="number" placeholder="aadhar" formControlName="aadhar" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.aadhar.errors }" />
+        <div *ngIf="submitted && f.aadhar.errors" class="invalid-feedback">
+            <div *ngIf="f.aadhar.errors.required">mobile is required</div>
+            <div *ngIf="f.aadhar.errors.minlength">
+                Password must be at least 10 characters
+            </div>
+            <div *ngIf="f.aadhar.errors.maxlength">
+                mobile must not exceed 10 characters
+            </div>
+        </div>
+    </div>
+    <div class="form-group register-show">
+
+
+        <div class=" my-1">
+            <angular2-multiselect [data]="dropdownList" [settings]="dropdownSettings"
+                formControlName="state">
+            </angular2-multiselect>
+        </div>
+
+        <div class=" my-1">
+
+            <angular2-multiselect [data]="district_dropdownList"
+                [settings]=" district_dropdownSettings" formControlName="district">
+            </angular2-multiselect>
+        </div>
+
+        <div class=" my-1">
+            <angular2-multiselect [data]="city_dropdownList"
+                [settings]="city_dropdownSettings" formControlName="city">
+            </angular2-multiselect>
+        </div>
+        <div class=" my-1">
+            <angular2-multiselect [data]="Vegetable_dropdownList"
+                [settings]=" Vegetable_dropdownSettings" formControlName="Vegetable">
+            </angular2-multiselect>
+        </div>
+
+
+
+    </div>
+    <div class="form-group register-show">
+        <button type="submit" class="btn btn-primary register-btn">Register</button>
+
+    </div>
+
+</form> -->

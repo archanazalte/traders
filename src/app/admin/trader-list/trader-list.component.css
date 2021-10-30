@@ -1,0 +1,37 @@
+.trader-bg{
+	font-family: 'Mukta', sans-serif;
+	height: calc(100vh - 65px);
+	/* background-image: url('../src/assets/img/bgimage.jpeg');  */
+	background-attachment: fixed;
+	   min-height:550px;
+	  
+	  background-repeat: no-repeat;
+	  background-size:cover;
+	  background-position:center;
+	  position:relative;
+	   overflow-y: hidden; 
+}
+.trader-img{
+    height: 120px;
+    width: 120px;
+
+}
+.traders-data{
+    list-style-type: none;
+}
+.fa{
+    padding: 4px;
+    margin: 2px;
+    /* background-color: #483d8b; */
+    color: grey;
+}
+.card-container{
+    height: 550px;
+    overflow-y: scroll;
+}
+.card{
+    margin: 10px;
+}
+.card-title{
+    margin-left: 2.5rem;
+}

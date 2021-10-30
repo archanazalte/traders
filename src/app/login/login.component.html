@@ -1,0 +1,36 @@
+<div class="image">
+
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <br><br><br>
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+                        <img src="assets\img\login_icon2.png" alt="Avatar" class="rounded-circle">
+                    </div>
+                    <form [formGroup]="loginform" (ngSubmit)="onlogin()" class="m-4">
+                        <div class="form-group">
+                            <div >
+                                <h2 class="text-center">SignIn</h2>
+                                <p>An OTP will be sent to your mobile number for verification</p>
+                            </div>
+                            <input type="number" placeholder="Mobile" formControlName="mobile" class="form-control"
+                                [ngClass]="{ 'is-invalid': loginsubmited && e.mobile.errors }" />
+                            <div *ngIf="loginsubmited && e.mobile.errors" class="invalid-feedback">
+                                <div *ngIf="e.mobile.errors.required">
+                                    mobile is required
+                                </div>
+                                <div *ngIf="e.mobile.errors.maxlength">
+                                    mobile must not exceed 10 characters
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group register-show">
+                            <button type="submit" class="btn btn-primary get-opt-btn">Get otp</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

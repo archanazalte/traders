@@ -1,0 +1,33 @@
+
+		@import url('https://fonts.googleapis.com/css?family=Mukta');
+/* set background image  */
+.image{
+  font-family: 'Mukta', sans-serif;
+	
+	min-height:550px;
+	
+	height: calc(100vh - 59px);
+	background-image: url('../../assets/img/bgimage.jpeg'); 
+	background-attachment: fixed;
+  
+
+	background-size:cover;
+	background-position:center;
+	position:relative;
+     overflow-y: hidden; 
+}
+.row{
+	margin-right: 0px;
+}
+.user-img{
+	
+    margin-top: -50px;
+	
+}
+
+.btn{
+	margin-top: 10px;
+}
+.card-body input{
+margin-bottom: 15px;
+}

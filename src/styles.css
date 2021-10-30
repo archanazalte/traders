@@ -1,0 +1,40 @@
+.custom-class-example {
+    color: #ccc;
+}
+.custom-class-example .c-token{
+    background: #0079fe !important;
+}
+.custom-class-example .pure-checkbox label::before {
+    background: #0079fe !important;
+}
+.custom-class-example .pure-checkbox input[type="checkbox"]:checked + label[_ngcontent-c1]:before {
+    background: #0079fe !important;
+}
+.cuppa-dropdown {
+    position: relative;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.pure-checkbox input[type=checkbox]+label {
+    position: relative;
+    padding-left: 2em;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    margin: 0;
+    font-weight: 300;
+    color: black;
+}
+.modal-backdrop.show {
+    opacity: 0 !important;
+}
+.modal-backdrop {
+  position: relative !important;
+  top: 0;
+  right: 0;
+  bottom: 4;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}

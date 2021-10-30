@@ -1,0 +1,19 @@
+<form  [formGroup]="filterForm" (ngSubmit)="onFilterFormSubmit()">
+    <div class="row">
+          <div class="col-md-6 my-1"> 
+            <angular2-multiselect [data]="dropdownList" [settings]="dropdownSettings" formControlName="state"  ></angular2-multiselect>
+        </div>
+        <div class="col-md-6 my-1"> 
+            <angular2-multiselect [data]="district_dropdownList"  [settings]=" district_dropdownSettings" formControlName="district"  ></angular2-multiselect>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-md-6 my-1">
+            <angular2-multiselect [data]="city_dropdownList" [settings]="city_dropdownSettings" formControlName="city"  ></angular2-multiselect>
+        </div>
+        <div class="col-md-6 my-1">
+            <angular2-multiselect [data]="fruit_dropdownList" [settings]=" fruit_dropdownSettings" formControlName="fruit"  ></angular2-multiselect>
+        </div>
+
+    </div>
+</form>

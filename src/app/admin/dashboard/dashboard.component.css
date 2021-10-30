@@ -1,0 +1,64 @@
+
+.notes{
+    margin-top: 2rem;
+  }
+  
+  .search{
+    float: right;
+  }
+  .big{
+    font-size: 2rem;
+    padding: 5px;
+  }
+  .create-btn{
+    margin-left: 30px;
+  }
+  .bg-color{
+     background-color: #fbfbfb; 
+   margin-left: 2rem;
+    height: 100vh;
+  }
+  .heading{
+    padding-top: 2rem;
+  }
+  .name{
+  float: right; 
+  padding-right: 2rem; 
+  }
+  .button{
+    text-decoration: none;
+  }
+  .line{
+    margin-top:  6rem;
+  }
+  .hr{
+    margin-top: 2rem;
+    padding-bottom: 3px;
+   color:#beeff7 ;
+  }
+  .notes{
+   padding-left: 1rem; 
+   text-decoration: none;
+  }
+  .icon{
+   
+    color: white;
+    padding: 10px;
+    background: gray;
+margin-top: 20px;
+align-items: center;
+padding-left: 50px;
+  }
+  .icon:hover{
+    cursor: pointer;
+    background: rgb(77, 76, 76);
+   
+  }
+  .admin{
+    background-color: #343A40;
+    
+  }
+.icon:active{
+  background-color: gray;
+}
+  
